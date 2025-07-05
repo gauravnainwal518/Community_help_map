@@ -1,27 +1,20 @@
-import React, { useState } from "react";
-import Toast from "./components/common/Toast";
+import React from "react";
+import Navbar from "./components/common/Navbar";
+import Footer from "./components/common/Footer";
+import MapView from "./components/map/MapView";
 
 const App = () => {
-  const [showToast, setShowToast] = useState(false);
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <button
-        className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
-        onClick={() => setShowToast(true)}
-      >
-        Show Toast
-      </button>
-
-      {showToast && (
-        <Toast
-          message="Successfully submitted!"
-          type="success"
-          onClose={() => setShowToast(false)}
-          duration={3000}
-        />
-      )}
-    </div>
+    <>
+      <Navbar />
+      <main className="min-h-screen pt-24 px-4">
+        <h1 className="text-2xl font-bold mb-4 text-gray-800">
+          Community Help Map
+        </h1>
+        <MapView />
+      </main>
+      <Footer />
+    </>
   );
 };
 
