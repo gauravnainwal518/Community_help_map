@@ -1,20 +1,27 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 import MapView from "./components/map/MapView";
+import Home from "./pages/home";
+import Register from "./pages/register";
+import Login from "./pages/login";
 
 const App = () => {
   return (
-    <>
+    <Router>
       <Navbar />
       <main className="min-h-screen pt-24 px-4">
-        <h1 className="text-2xl font-bold mb-4 text-gray-800">
-          Community Help Map
-        </h1>
-        <MapView />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/map" element={<MapView />} />
+          <Route path="/signup" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
       </main>
       <Footer />
-    </>
+    </Router>
   );
 };
 

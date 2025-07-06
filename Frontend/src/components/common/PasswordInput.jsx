@@ -25,6 +25,7 @@ const PasswordInput = ({
           {label}
         </label>
       )}
+
       <input
         type={showPassword ? "text" : "password"}
         name={name}
@@ -36,13 +37,15 @@ const PasswordInput = ({
           error ? "border-red-400" : "border-gray-300"
         } text-gray-800 placeholder-gray-400 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 ${className}`}
       />
+
       <button
         type="button"
         onClick={toggleVisibility}
-        className="absolute top-8 right-3 text-sm text-gray-600 focus:outline-none"
+        className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-gray-600 focus:outline-none"
       >
         {showPassword ? "Hide" : "Show"}
       </button>
+
       {error && <p className="mt-1 text-sm text-red-500">{error}</p>}
     </div>
   );
