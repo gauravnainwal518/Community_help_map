@@ -7,8 +7,9 @@ import MapView from "./components/map/MapView";
 import Home from "./pages/home";
 import Register from "./pages/register";
 import Login from "./pages/login";
+import ChatPage from "./pages/ChatPage";
 
-const App = () => {
+function App() {
   return (
     <Router>
       <Navbar />
@@ -18,11 +19,12 @@ const App = () => {
           <Route path="/map" element={<MapView />} />
           <Route path="/signup" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/chatpage" element={<ChatPage />} />
         </Routes>
       </main>
       <Footer />
     </Router>
   );
-};
+}
 
 export default App;
