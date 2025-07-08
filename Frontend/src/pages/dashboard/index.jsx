@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../../components/Button";
-import Loader from "../../components/Loader";
-import Modal from "../../components/Modal";
-import Input from "../../components/Input";
-import Textarea from "../../components/Textarea";
+import Button from "../../components/common/Button";
+import Loader from "../../components/common/Loader";
+import Modal from "../../components/common/Modal";
+import Input from "../../components/common/Input";
+import Textarea from "../../components/common/Textarea";
 
 // Optional: Chart imports (install Recharts first)
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
